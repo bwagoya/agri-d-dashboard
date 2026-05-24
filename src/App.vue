@@ -44,15 +44,17 @@
 
 <script setup>
 import { ref } from 'vue'
+import OverviewView from './views/OverviewView.vue'
 import FarmersView from './views/FarmersView.vue'
 import ListingsView from './views/ListingsView.vue'
 import VerificationsView from './views/VerificationsView.vue'
 import SessionsView from './views/SessionsView.vue'
 
 const drawer = ref(true)
-const currentView = ref(FarmersView)
+const currentView = ref(OverviewView)
 
 const navItems = [
+  { title: 'Overview', icon: 'mdi-view-dashboard', component: OverviewView },
   { title: 'Farmers', icon: 'mdi-account-group', component: FarmersView },
   { title: 'Listings', icon: 'mdi-sprout', component: ListingsView },
   { title: 'IoT Verifications', icon: 'mdi-shield-check', component: VerificationsView },
